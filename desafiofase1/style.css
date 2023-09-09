@@ -43,9 +43,7 @@ p, #footer {
 .line {
     width: 568px;
     height: 0;
-
     margin: 0 8px;
-
     border: 1px solid #ECEFF2;
     margin: auto;
 }
