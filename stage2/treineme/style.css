@@ -1,0 +1,128 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&family=Mulish:wght@400;700&family=Open+Sans:wght@400;700&display=swap'); url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&family=Mulish:ital@1&family=Open+Sans:wght@400;700&display=swap');
+
+/*
+
+font-family: 'DM Sans', sans-serif;
+font-family: 'Mulish', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+*/
+
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(180deg, rgba(227, 255, 248, 0.00) 82.08%, rgba(227, 255, 248, 0.38) 100%);  
+}
+
+.page{
+    width: 1000px; 
+    margin: 0 auto;
+    padding-top: 65px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 55px;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 48px;
+    margin: 0;
+    padding: 0;
+}
+
+h1, ul{
+
+    font-family: 'Mulish', sans-serif;
+
+}
+
+ul li  a{
+    text-decoration: none;
+    color: #1F1534;
+    opacity: 0.5;
+}
+
+ul li a:hover{
+    font-weight: bold;
+    opacity: 1;
+}
+
+h1{
+    font-size: 49px;
+    line-height: 56px;
+    font-weight: normal;
+    color: #1F1534;
+}
+ h1 span{
+    color: #86C5CC;
+    font-weight: bold;
+}
+section h1{
+    width: 490px;
+}
+
+section > p{
+    color: #7D7987;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 28px;
+    font-size: 14px;
+    width: 438px;
+    margin: 40px 0px;
+}
+
+button{
+    font-family: 'Open Sans', sans-serif;
+    border: 0;
+    background-color: #69B99D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px 15px;
+    color: white;
+    gap: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #488b73;
+}
+footer{
+    text-align: center;
+}
+
+footer > p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+footer a{
+    font-weight: bold;
+    color: #1F1534;
+}
+
+#balls{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
