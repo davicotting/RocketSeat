@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>iMentor | Main</title>
+</head>
+
+<body>
+    <div class="divmaster">
+        <header>
+            <h1>Mentoria</h1>
+            <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
+        </header>
+
+        <form id="mentorship">
+            <div class="fieldset-wrapper">
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+
+                    <div class="padrao">
+                        <div class="input-wrapper">
+                            <label for="event-name">Nome</label>
+                            <input type="text" name="" id="event-name">
+                        </div>
+
+
+                        <div class="input-wrapper">
+                            <label for="event-lastname">Sobrenome</label>
+                            <input type="text" name="" id="event-lastname">
+                        </div>
+
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="event-email">E-mail<span>(digite um email válido)</span></label>
+                        <input type="email" name="" id="event-email">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="event-password">Senha<span>(mínimo de 6 caracteres)</span></label>
+                        <input type="password" name="" id="event-password" minlength="6">
+                    </div>
+
+            </div>
+            </fieldset>
+
+            <div class="fieldset-wrapper">        
+            <fieldset>
+                <legend>Informações do Mentor</legend>
+                
+                <div class="input-wrapper">
+                    <label for="event-password">Nome do seu mentor<span>(só o primeiro nome)</span></label>
+                    <input type="password" name="" id="event-password" minlength="6">
+                </div>
+                
+            </fieldset>
+             </div>
+
+             <div class="fieldset-wrapper">        
+                <fieldset>
+                    <legend>Seus Horario disponíveis</legend>
+    
+                    <h1 class="x">Primeira mentoria</h1>
+                    <div id="time">
+                    <div class="input-wrapper" id="date">
+                        <label for="event-date">Data<span>(DD/MM/AAAA)</span></label>
+                        <input type="date" name="" id="event-date">
+                        
+                    </div>
+
+                    <div class="begin-finish">
+                    <div class="input-wrapper" id="hour">
+                        <label for="event-begin">Das</label>
+                        <input type="time" name="" id="event-begin">
+                    </div>
+
+                    <div class="input-wrapper" id="hour">
+                        <label for="event-finish">Até</label>
+                        <input type="time" name="" id="event-finish">
+                    </div>
+                </div>
+            </div> <!--divisao-->
+
+            <h1 class="x">Segunda mentoria</h1>
+                    <div id="time">
+                    <div class="input-wrapper" id="date">
+                        <label for="event-date">Data<span>(DD/MM/AAAA)</span></label>
+                        <input type="date" name="" id="event-date">
+                        
+                    </div>
+
+                    <div class="begin-finish">
+                    <div class="input-wrapper" id="hour">
+                        <label for="event-begin">Das</label>
+                        <input type="time" name="" id="first-event-begin">
+                    </div>
+
+                    <div class="input-wrapper" id="hour">
+                        <label for="second-event-finish">Até</label>
+                        <input type="time" name="" id="second-event-finish">
+                    </div>
+                </div>
+            </div>
+                </fieldset>
+                 </div>
+
+        </form>
+        <footer>
+            <button type="submit" form="mentorship" class="enviar" value="enviar formulario">
+                Salvar
+            </button>
+        </footer>
+    </div>
+    
+       
+</body>
+
+</html>
