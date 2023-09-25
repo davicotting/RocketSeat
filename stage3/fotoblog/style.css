@@ -1,0 +1,188 @@
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap');
+
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, body, input{
+        font-family: 'Mulish', sans-serif;
+    }
+
+    :root{
+        font-size: 62.5%;
+
+        --color-base-white: #ffffff;
+        --color-base-gray-100: #f5f5f5;
+        --color-base-gray-900: #202024;
+        --color-base-gray-300: #8D8D99;
+        --color-base-gray-500: #3D3D3D;
+    }
+    
+
+    body{
+        background-color: var(--color-base-white);
+    }
+
+    .app{
+        display: grid;
+        height: 100vh;
+        grid-template-rows: max-content 1fr max-content;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        gap: 7.2rem;
+        font-weight: bold;
+    }
+    header > form{
+        flex: 1;
+        
+    }
+    header li{
+        cursor: pointer;
+    }
+    .input-wrapper label{
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+    }
+    .input-wrapper input {
+        width: 100%;
+        padding: 1.6rem;
+        background-color: var(--color-base-gray-100);
+        border-radius: .6rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        border: 0;
+    }
+    input-wrapper > input::placeholder{
+        opacity: 0.56;
+        color: var(--color-base-gray-500);
+    }
+    .container{
+        padding: 1.6rem 3.2rem;
+        width: min(112rem, 100%);
+        margin: 0 auto;
+    }
+    main{
+        background-color: var(--color-base-gray-100);
+        color: var(--color-base-gray-900);
+        overflow-y: scroll;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        gap: 7.2rem;
+    }
+    nav ul{
+        display: flex;
+        align-items: center;
+        gap: 7.2rem;
+        list-style: none;
+        font-size: 1.8rem;
+        color: var(--color-base-gray-300);
+    }
+    ul li.active{
+        color:var(--color-base-gray-900);
+       
+    }
+    footer > p{
+        text-align: center;
+        padding: 1.6rem;
+        font-weight: 600;
+    }
+    .avatar{
+        width: 4.2rem;
+        height: 4.2rem;
+        object-fit: cover; /*Cobre a altura e largura preenchendo a imagem sem esticar*/
+        border-radius: 50%;
+    }
+
+    main h1{
+        padding-top: 1.6rem;
+        font-size: 2.4rem;
+    }
+    .gallery{
+        margin-top: 3.2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.2rem;
+    }
+    .item img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+      
+        transition: all 200ms ease-in-out;
+    }
+    .item img:hover{
+        filter: contrast(100%) saturate(200%);
+        transform:scale(1.1) rotate(-2deg);
+    }
+    .item{
+        border-radius: .8rem;
+        overflow: hidden;
+        background-color: var(--color-base-white);
+        cursor: pointer;
+    }
+    .details{
+        padding: 2.2rem;
+        background-color: var(--color-base-white);
+        z-index: 1;
+        position: relative;
+    }
+    .details h2{
+        font-size: 1.8rem;
+    }
+    .tags{
+        margin-top: 1.2rem;
+    }
+    .tags span{
+        padding: .6rem;
+        background-color: var(--color-base-gray-100);
+        border-radius: .4rem;
+        line-height: 0;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+    header{
+        --startY: -100%;
+        animation: move .2s;
+    }
+    footer{
+        animation: move .2s;
+        --startY: 100%;
+    }
+    @keyframes move{
+
+        from{
+            transform: translateY(var(--startY));
+        }
+        
+    }
+
+    .item{
+       animation-name: appear;
+       transition: .4s;
+       animation-fill-mode: forwards;
+       animation-timing-function: ease;
+    }
+
+    @keyframes appear{
+        
+        0%{
+            opacity: 0.4;
+            transform: translateX(-100px);
+        }
+
+        50%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+    }

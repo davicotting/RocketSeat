@@ -1,0 +1,259 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root{
+        font-size: 62.5%;
+        --placeholder: color: hsl(0, 0%, 100%);;
+    }
+
+    body{
+
+        font-family: 'Mulish', sans-serif;
+                
+    }
+
+    .container{
+        display: grid;
+        
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 78px auto auto 78px;
+
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "sidebar sidebar sidebar"
+        "footer footer footer";
+
+        height: 100vh;
+
+        width: 100%;
+    }
+        
+    header{
+        grid-area: header;
+        background-color: hsl(195, 91%, 25%);
+        height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.2rem 2.8rem;
+
+    }
+
+    header input{
+        padding: 1.2rem;
+        border-radius: 0.4rem;
+        background: hsla(0, 0%, 100%, 0.2);
+        border: none;
+        color: #FFF;
+        font-family: 'Mulish', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+
+        animation-name: aparecerinput;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    header input::placeholder{
+        color: var(--placeholder);
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    .p-wrapper{
+        padding: 2.6rem;
+    }
+
+    .caixa-p p:nth-child(1){
+        margin-bottom: 2.0rem;
+    }
+
+    .gatoimg{
+        width: 100%;
+    }
+
+    .opinion{
+        display: flex;
+        flex-direction: column;
+        margin: 3.1rem 2.2rem;
+        margin-bottom: 3.1rem;
+        gap: .8rem;
+    }
+    
+    .main-all{
+        margin-bottom: 3.2rem;
+        animation-name: aparecer;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    .vote{
+        display: flex;
+        gap: 1.0rem;
+    }
+
+    .bolinha{
+        height: 4.6rem;
+        width: 4.6rem;
+        background-color: hsl(195, 91%, 25%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main p{
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 160%; 
+    }
+
+    .side-bar{
+        grid-area: sidebar;
+        padding-inline: 1.4rem;
+        padding-bottom: 3.9rem;
+        animation-name: aparecer2;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    .side-bar h2{
+        color:hsl(240, 6%, 13%);
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%;
+    }
+
+    .cat-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+    }
+
+    .cat-sect{
+        display: flex;
+        gap: 1.6rem;
+        color:  hsl(240, 5%, 7%);
+        font-family: Mulish;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 22.4px */
+    }
+
+    .text-description{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer{
+        grid-area: footer;
+        display: flex;
+        padding: 1.6rem;
+        justify-content: center;
+        align-items: center;
+        background: hsl(195, 46%, 40%);
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 600;
+
+    }
+
+    footer p{
+        animation-name: aparecerfooter;
+        animation-duration: .4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+
+    @media (min-width: 1280px) {
+        .container{
+            display: grid;
+            
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 78px auto auto 78px;
+    
+            grid-template-areas: 
+            "header header"
+            "main sidebar"
+            "main sidebar"
+            "footer footer";
+    
+            height: 100vh;
+    
+            width: 100%;
+        }
+
+        .opinion{
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
+            padding: 1.2rem 12.2rem;
+        }
+
+        header input{
+            width: 100.53rem;
+        }
+
+        main{
+            padding-top: 4.4rem;
+            padding-left: 10.9rem;
+            padding-right: 3.4rem;
+
+        }
+
+        .side-bar{
+            padding-left: 0;
+            padding-right: 10.9rem;
+            padding-top: 4.4rem;
+        }
+        
+    }
+
+    @keyframes aparecer{
+        0%{
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+    }
+
+    @keyframes aparecer2{
+        0%{
+            opacity: 0;
+            transform: translateX(100px);
+        }
+    }
+
+    @keyframes aparecerfooter{
+        0%{
+            opacity: 0;
+            transform: translateY(100px);
+        }
+    }
+    @keyframes aparecerinput{
+        0%{
+           width: 30rem;
+        }
+    }
+
+
