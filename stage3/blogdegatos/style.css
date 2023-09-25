@@ -43,6 +43,10 @@
         align-items: center;
         justify-content: space-between;
         padding: 1.2rem 2.8rem;
+        animation-name: aparecerheadermobile;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
 
     }
 
@@ -56,10 +60,6 @@
         font-size: 1.6rem;
         font-weight: 600;
 
-        animation-name: aparecerinput;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
     }
 
     header input::placeholder{
@@ -213,6 +213,12 @@
 
         header input{
             width: 100.53rem;
+
+            animation-name: inputaparece;
+            animation-duration: 1s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
         }
 
         main{
@@ -250,10 +256,17 @@
             transform: translateY(100px);
         }
     }
-    @keyframes aparecerinput{
+    @keyframes aparecerheadermobile{
         0%{
-           width: 30rem;
+          transform: translateY(-100px);
         }
     }
+    @keyframes inputaparece{
+        0%{
+            width: 0;
+        }        
+    }
+    
+    
 
 
