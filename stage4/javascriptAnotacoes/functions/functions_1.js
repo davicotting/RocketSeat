@@ -357,11 +357,47 @@
 
    // Operadores relacionais
 
-   // && totalmente restrita onde os dois lados devem ser verdadeiros para ser verdadeiros ==> true && true = true
+   // && "and" totalmente restrita onde os dois lados devem ser verdadeiros para ser verdadeiros ==> true && true = true
 
    let leftside = false;
    let rightside = true;
 
    console.log(leftside && rightside); // apenas verdade se true && true, caso contrario tudo sera falso.
 
-   
+   // || "or" um dos dois lados deve ser verdadeiro para que a condicao seja verdadeira 
+
+   console.log(leftside || rightside) // true
+
+   // ! 'not' troca o valor dentro daquela variavel se true ela vira false e se false vira true.
+
+   console.log(!rightside)  // rightside era true e agora virou false.
+
+   //condicional ternario ? :
+
+   let bread = true;
+   let cheese = false;  
+                                             
+   const niceBreakFast = bread || cheese ? 'O cafe esta perfeito!' : 'Cafe esta incompleto'; // ? => se a condicao foi atendida | : => se a condicao nao foi atendida
+
+   console.log(niceBreakFast);
+
+   // Utilizando o condicional ternario para verificar se uma pessoa e maior de idade
+
+   let age = 17;
+
+   let adult = age >= 18 ? 'voce e maior de idade' : 'voce e menor de idade';
+
+   console.log(adult) // voce e menor de idade
+
+   // String Operator 
+
+   // comparacao
+
+   console.log('a' == 'a')// true
+
+   let alpha = 'alpha';
+
+   alpha += 'bet';
+
+   console.log(alpha); // alphabet
+
