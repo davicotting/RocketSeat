@@ -306,13 +306,62 @@
 
    console.log(two !== 2); // ou seja o valor e o tipo do valor 2 e estritamente igual ao valor que esta dentro de two? nao, entao false
    console.log(two !== '2'); // two e estritamente diferente de '2' string? SIM, ou seja TRUE
+
+   // maior que > | maior e igual a => | menor que < | menor e igual a <=.
+
+
+   // Operadores de atribuicao
+
+   // assigment
+
+   let x = 1;
+
+   // adition assigment
+
+   x += 1; // x = x + 1;
+   console.log(x);
+
+   // subtraction assigment
+
+   x -= 1; // x = x - 1; (value into the x varaible = 2)
+   console.log(x) // x = 2 - 1 = 1;
+
+   // multiplication assigment
+
+   x *= 2; // x = x * 2;
+   console.log(x) // 2
+
+   // division assigment
+
+   let y = 10; // y value = 10;
+
+   y /= 2; // y = y / 2 = 5;
+   console.log(y); // 5;
+
+   // reminder
+
+   let z = 10;
+
+   z %= 2; 
+   console.log(z);
+   
    
 
+   // exponetiation
 
+   let two2 = 2; 
 
-      
+   two2 **= 2; // 2 elevado a 2 = 4;
 
+   console.log(two2);
 
+   // Operadores relacionais
 
+   // && totalmente restrita onde os dois lados devem ser verdadeiros para ser verdadeiros ==> true && true = true
 
-    
+   let leftside = false;
+   let rightside = true;
+
+   console.log(leftside && rightside); // apenas verdade se true && true, caso contrario tudo sera falso.
+
+   
