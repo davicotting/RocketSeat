@@ -248,10 +248,12 @@
             font-style: normal;
             font-weight: 900;
             line-height: normal;
+            animation: animateContact 1s ease-out forwards;
         }
 
         main h2{
             font-size: 3.2rem;
+            animation: animateContact 1s ease-out forwards;
         }
 
         .astronauta{
