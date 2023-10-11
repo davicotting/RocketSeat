@@ -294,7 +294,9 @@
         .inputs{
             width: 59.2rem;
         }
-
+        footer{
+            animation: animateFooter .7s ease-out forwards;
+        }
         .seta{
 
             position: absolute;
@@ -351,6 +353,15 @@
             }
             100%{
                 transform: translateX(0);
+            }
+        }
+
+        @keyframes animateFooter {
+            0%{
+                transform: translateY(200px);
+            }
+            100%{
+               transform: translateY(0); 
             }
         }
         
