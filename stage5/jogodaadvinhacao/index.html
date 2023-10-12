@@ -4,12 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <title>Divination game | Main</title>
 </head>
 <body>
     <main>
-        
+
+        <div class="screen1">
+
+        <h1>Jogo da Adivinhação</h1>
+        <p>Adivinhe o número entre 0 e 10</p>
+
+        <form action="">
+        <input type="number" name="" id="inputNumber">
+        <button id="btnToTry">Tentar</button>
+        </form>
+
+        </div> <!-- screen 1 -->
+
+        <div class="screen2 hide">
+
+            <h2>Acertou em 3 tentativas!</h2>
+            
+            <button id="btnToBack">Jogar novamente</button>
+
+        </div>
+
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
