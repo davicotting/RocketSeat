@@ -302,7 +302,7 @@
             position: absolute;
             top: 550px;
             left: 120px;
-            animation: animateArrow 2s linear forwards;
+            animation: animateArrow 2s ease-out infinite;
         }
         .planet{
             animation: surgeDiv 1s forwards;
