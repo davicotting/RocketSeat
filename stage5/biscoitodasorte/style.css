@@ -1,0 +1,165 @@
+
+  
+   @import url('https://fonts.googleapis.com/css2?family=Borel&family=DM+Sans:opsz@9..40&family=Dancing+Script&family=Montserrat:wght@700&display=swap');
+
+    :root{
+        font-size: 62.5%;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    body{   
+        background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+        background-repeat: no-repeat;
+    }
+
+    main{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Screen 1 Configs */
+
+    .screen1{
+        height: 31.2rem;
+        width: 30rem;
+        padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+        background-color: white;
+        border-radius: .5rem;
+        box-shadow: 0px 2rem 5rem 0px rgba(0, 0, 0, 0.80);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    
+    .hide{
+        display: none;
+    }
+    
+    .screen1 h1{
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #34355B;
+        width: 25.8rem;
+        height: 5.8rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .screen1 p{
+        font-family: 'DM Sans', sans-serif;
+        color: #34355B;
+        text-align: center; 
+        font-size: 1.6rem;  
+        font-weight: 400;
+        margin-bottom: 2.6rem;
+        
+    }
+
+    /* Screen 2 Configs */
+
+    .screen2{
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.7rem;
+        padding: 48px 64px;    
+        width: 30rem;
+        border-radius: 5px;
+        box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.80);
+        text-align: center;
+    }
+
+    .screen2 h1{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 2.4rem;
+    }
+
+    #cookieIsOpened{
+        color: #000;
+        font-family: 'Dancing Script', cursive;
+        font-size: 2.4rem;
+        font-weight: 400;
+        background: #E4EDF1;
+        box-shadow: .2rem .2rem .2rem 0px rgba(85, 85, 85, 0.50);
+        padding: 1rem; 
+    }
+
+    #cookieBefore{
+        cursor: pointer;
+    }
+
+    #cookieBefore:hover{
+        animation: shakeCookie 0.5s infinite;
+    }
+
+    #cookieAfter{
+        margin-top: 4.3rem;
+        margin-bottom: 4.2rem;
+    }
+
+    #doNewCookie{
+        border-radius: .4rem;
+        background: #FF9500;
+        padding: 1.6rem;
+        color: white;
+        border: none;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background .4s;
+    }
+
+    #doNewCookie:hover{
+        background-color: #d4820f;
+    }
+
+    /* Animations */
+
+
+    @keyframes shakeCookie{
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    /* Screen2 tem o hide inicial como display none */
+
+    .screen2.hide{
+        display: none;
+    }
+
+
+    /* media */
+
+    @media (max-width: 450px){
+        .screen1{
+            width: 22rem;
+        }
+        .screen2{
+            width: 22rem;
+        }
+    }
+   
