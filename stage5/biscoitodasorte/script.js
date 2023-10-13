@@ -129,7 +129,7 @@
     }
 
     function switchPhrase(){
-        AleatoryPhrase = Math.round(Math.random() * 98);
+        AleatoryPhrase = Math.round(Math.random() * cookiePhrases.length);
         return AleatoryPhrase;
     }
 
