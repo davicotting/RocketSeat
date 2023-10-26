@@ -96,6 +96,8 @@
         background: #E4EDF1;
         box-shadow: .2rem .2rem .2rem 0px rgba(85, 85, 85, 0.50);
         padding: 1rem; 
+        animation: surgeCard 1s ease-in-out forwards;
+        
     }
 
     #cookieBefore{
@@ -143,6 +145,17 @@
         80% { transform: translate(-1px, -1px) rotate(1deg); }
         90% { transform: translate(1px, 2px) rotate(0deg); }
         100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    @keyframes surgeCard{
+        0%{
+            opacity: 0;
+            transform: translateY(200px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     /* Screen2 tem o hide inicial como display none */

@@ -132,5 +132,3 @@
         AleatoryPhrase = Math.round(Math.random() * cookiePhrases.length);
         return AleatoryPhrase;
     }
-
-    
