@@ -165,11 +165,14 @@
         transition: transform .5s;
     }
 
-    .error-wrapper.open{
+    .open{
          visibility: visible;
          opacity: 1;
          transform: translateY(0);
     }
 
-    
+    .putModalOff{
+        display: none;
+    }
 
+    
