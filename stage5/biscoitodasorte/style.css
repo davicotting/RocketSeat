@@ -14,7 +14,8 @@
 
     body{   
         background: linear-gradient(45deg, #190361 0%, #B0F 100%);
-        background-repeat: no-repeat;
+        background-repeat: no-repeat;`
+
     }
 
     main{
