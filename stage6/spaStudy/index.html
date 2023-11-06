@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage 6 | Single Page Application - SPA</title>
+</head>
+<body>
+    <nav>
+        <a href="/" onclick="route()">Home</a>
+        <a href="/about" onclick="route()">Sobre</a>
+        <a href="/contact" onclick="route()">Contact</a>
+        <a href="/404" onclick="route()">404</a>
+    </nav>
+
+    <!-- vamos ver a rota aqui -->
+    
+    <div class="app">
+
+    </div>
+
+
+    <script>
+        
+        // criando a rota >
+
+        const pages = {
+            "/": '/pages/home.html',
+            "/about": '/pages/about.html',
+            "/contact": '/pages/contact.html',
+            404: '/pages/404.html',
+        }
+
+        // acessando a paginda
+
+        console.log(pages["//contact"]); 
+
+        function route(event){
+            event = event || window.event; // evento recebe o evento ou recebe um evento da tela;
+            event.preventDefault(); // nao faz o padrao do click da tag <a>...</a> que seria redirecionar.
+            window.history.pushState({}, "", event.target.href);
+            handle();
+        }
+
+        function handle(){
+            const handletest = window.location.pathname; 
+            console.log(handletest);
+        }
+
+    </script>
+</body>
+</html>
