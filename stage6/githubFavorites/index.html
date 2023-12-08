@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/main.js" type="module" defer></script>
+    <title>GithubFavorites</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Github favorites</h1>
+            <div class="search">
+                <label for="input-search" class="sr-only">Pesquisar por usuarios do github</label>
+                <input id="input-search" type="text" name="" id="" placeholder="Usuario do Github" >
+                <button type="submit">&plus;</button>
+            </div>
+        </header>
+
+        <table>
+            <thead>
+
+                <tr>
+                    <th>Usuario</th>
+                    <th>Repositorios</th>
+                    <th>Seguidores</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                
+
+                <tr>
+                    <td class="user">
+                        <img src="https://github.com/antonioMesquit.png" alt="">
+                        <a href="https://github.com/antonioMesquit" target="_blank">
+                            <p>Antonio Mesquita</p>
+                            <span>antoniomesquit</span>
+                        </a>
+                        
+                    </td>
+                    <td class="repositories">59</td>
+                    <td>125</td>
+                    <td class="followers">
+                        <button class="remove">&times;</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
