@@ -4,7 +4,7 @@
   "description": "Estudos e desenvolvimento da minha API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/server.js"
   },
   "author": "Davi Thomeny Cotting",
   "license": "ISC",
