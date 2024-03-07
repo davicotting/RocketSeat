@@ -3,9 +3,10 @@
 
     const app = express();
 
-    app.get("/", (request, response) => {
-        response.send("Hello world");
-    });
+    app.use(express.json()); // app conversa em json
+
+
+    
 
     const PORT = 3333;
 
