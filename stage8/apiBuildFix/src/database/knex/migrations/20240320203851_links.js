@@ -1,4 +1,4 @@
-    
+
     // migrations da tabela dos links :)
 
     exports.up = knex => knex.schema.createTable("links", table => {
