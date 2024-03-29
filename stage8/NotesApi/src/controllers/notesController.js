@@ -14,7 +14,7 @@
     class NotesController{
 
        async create(request, response){
-
+            console.log("teste");
             const { title, description, links, tags } = request.body;
             const { user_id } = request.params;
 
