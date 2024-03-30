@@ -1,89 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitFav | Main</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" type="module" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/main.js" type="module" defer></script>
+    <title>GithubFavorites</title>
 </head>
 <body>
-    <div class="app">
-
-        <div class="container">
-
-        <div class="header">
-            <div class="logo"><img src="assets/Gitfav.svg" alt=""></div>
-
+    <div id="app">
+        <header>
+            <img src="assets/Gitfav.svg" alt="logo">
             <div class="search">
-                <input type="text" name="" id="" placeholder="Digite o Github username que quer favoritar">
-                <button type="submit"><img src="assets/Vector.svg" alt="">Favoritar</button>
+                <label for="input-search" class="sr-only">Pesquisar por usuarios do github</label>
+                <input id="input-search" type="text" name="" id="" placeholder="Usuario do Github" >
+                <button type="submit" class="submit"><img src="assets/Vector.svg" alt=""> Favoritar</button>
             </div>
-         </div>
+        </header>
 
-         <table>
+        <table>
             <thead>
-                <th>Usuário</th>
-                <th>Repositories</th>
-                <th>Followers</th>
-                <th>Ação</th>
+
+                <tr>
+                    <th>Usuario</th>
+                    <th>Repositorios</th>
+                    <th>Seguidores</th>
+                    <th>Ação</th>
+                </tr>
             </thead>
-        
 
-         <tbody>
-            <tr>
-
-                <td class="user">
-                    <div class="userGeneral">
-                        <div class="userImg">
-                            <img src="https://github.com/davicotting.png" alt="">
-                        </div>
-    
-                        <div class="userTarget">
-                            <a href="https://github.com/davicotting">Davi Cotting</a>
-                            <p>/davicotting</p>
-                        </div>  
-                    </div>  
-                </td>
-
-                <td class="repositorires">129</td>
-                <td class="followers">23</td>
-                <td>
-                    <button class="remove">Remover</button>
-                </td>
+            <tbody>
                 
-           </tr>
 
-           
+                <tr>
+                    <td class="user">
+                        <img src="https://github.com/antonioMesquit.png" alt="">
+                        <a href="https://github.com/antonioMesquit" target="_blank">
+                            <p>Antonio Mesquita</p>
+                            <span>antoniomesquit</span>
+                        </a> 
+                    </td>
 
-           <tr>
-
-            <td class="user">
-                <div class="userGeneral">
-                    <div class="userImg">
-                        <img src="https://github.com/davicotting.png" alt="">
-                    </div>
-
-                    <div class="userTarget">
-                        <a href="https://github.com/davicotting">Davi Cotting</a>
-                        <p>/davicotting</p>
-                    </div>  
-                </div>  
-            </td>
-
-            <td class="repositorires">129</td>
-            <td class="followers">23</td>
-            <td>
-                <button class="remove">Remover</button>
-            </td>
-            
-       </tr>
-           
-
-         </tbody>
-    </table>
-    </div>
-
+                    <td class="repositories">59</td>
+                    <td class="followers">??</td>
+                    <td><button class="remove">remover</button></td>
+                   
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
