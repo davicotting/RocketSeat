@@ -6,13 +6,7 @@
 
     class UserControllers{
 
-        index(){
-
-        }
-
-        show(){
-
-        }
+        
 
         async create(request, response){
             const { name, email, password } = request.body;
@@ -88,9 +82,6 @@
 
             }
 
-        delete(){
-            
-        }
 
 
 
