@@ -1,11 +1,12 @@
     
-    const { Router } = require('express')  // here
+    const { Router } = require('express');  // here
+    const usersRoutes = require('./userRoutes');
+    const notesRoutes = require('./notesRoutes');
+    const tagsRoutes = require("./tagsRoutes");
 
-    const usersRoutes = require('./userRoutes')
-    const notesRoutes = require('./notesRoutes')
+    const routes = Router();
+    routes.use('/users', usersRoutes);
+    routes.use('/notes', notesRoutes);
+    routes.use('/tags', tagsRoutes);
 
-    const routes = Router()
-    routes.use('/users', usersRoutes)
-    routes.use('/notes', notesRoutes)
-
-    module.exports = routes
+    module.exports = routes;
