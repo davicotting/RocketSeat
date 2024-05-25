@@ -11,14 +11,18 @@
 
     const server = express();
 
+    const PORT = 4545;
+
     server.use(express.json());
+
+    server.use(routes);
 
     migrationsRunner();
 
     server.use((error, request, response, next) => {
         	if(error instanceof AppError){
                 return response.status(error.statusCode).json({
-                    status: error.statusCode,
+                    status: "error",
                     message: error.message
                 })
             }
@@ -30,11 +34,6 @@
                 message: "Internal server error :("
             });
     });
-
-
-    const PORT = 4545;
-
-    server.use(routes);
 
     server.listen(PORT, () => console.log(`RocketNotes server is running on port ${PORT}`));
 

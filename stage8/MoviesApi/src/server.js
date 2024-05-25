@@ -8,6 +8,7 @@
     const PORT = 2121;
 
     app.use(express.json());
+    
     app.use(routes);
 
     database();
