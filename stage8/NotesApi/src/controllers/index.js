@@ -82,10 +82,6 @@
 
             }
 
-
-
-
-
     }
 
    module.exports = UserControllers;

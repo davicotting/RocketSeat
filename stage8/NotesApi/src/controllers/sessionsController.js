@@ -1,10 +1,12 @@
 
 
     const knex = require("../database/knex");
-    const { hash, compare } = require("bcryptjs"); 
+    const { compare } = require("bcryptjs"); 
     const AppError = require("../utils/AppError");
     const authConfigs = require("../configs/auth");
-    const { sign } = require("jsonwebtoken")
+    const { sign } = require("jsonwebtoken");
+    
+   
 
     class sessionsController{
         async create(request, response) {
@@ -22,16 +24,16 @@
                 throw new AppError(`Email e/ou senha incorreta`, 401);
             }
 
-            const { secret, expiresIn } = authConfigs.jwt;
+            const { expiresIn, secret } = authConfigs.jwt;
 
             const token = sign({}, secret, {
-                subject: String(user.id),
-                expiresIn
+                subject: 
+                String(user.id),
+                expiresIn,
             })
-
             
 
-            return response.json({user, token  });
+            return response.json({ user, token });
         }
     }
 

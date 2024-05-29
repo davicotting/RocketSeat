@@ -24,7 +24,7 @@
         }
 
        async create(request, response){
-            console.log("teste");
+
             const { title, description, links, tags } = request.body;
             const { user_id } = request.params;
 
@@ -70,6 +70,8 @@
        async index(request,response){
 
             const { user_id, title, tags} = request.query;
+
+            console.log(request.query);
 
             let notes;
 
