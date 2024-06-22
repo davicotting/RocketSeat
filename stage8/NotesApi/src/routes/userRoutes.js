@@ -7,9 +7,21 @@
 
     const userRoutes = Router();
 
-    const authMiddleware = require("../middlewares/ensureAuthenticated");
+    const ensureAuthenticated = require("../middlewares/ensureAuthenticated");
 
+    const multer = require("multer");
+
+    const uploadConfigs = require("../configs/upload");
+
+    const upload = multer(uploadConfigs.MULTER);
+
+    const UserAvatarController = require("../controllers/UserAvatarController");
+
+    const userAvatarController = new UserAvatarController();
+    
     userRoutes.post("/", userControllers.create);
-    userRoutes.put("/", authMiddleware, userControllers.update);
+    userRoutes.put("/", ensureAuthenticated, userControllers.update);
+    userRoutes.patch("/avatar", ensureAuthenticated, upload.single("avatar"), userAvatarController.update);
+
 
     module.exports = userRoutes;

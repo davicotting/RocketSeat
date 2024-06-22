@@ -1,13 +1,12 @@
 
     const { Router } = require("express");
 
+    const sessionsRoutes = Router();
+
     const SessionsController = require("../controllers/sessionsController");
 
     const sessionsController = new SessionsController();
 
-    const SessionsRoutes = Router();
+    sessionsRoutes.post("/", sessionsController.create); // nao esquecer da duvida aqui!
 
-    SessionsRoutes.post("/", sessionsController.create);
-
-    module.exports = SessionsRoutes;
-
+    module.exports = sessionsRoutes;

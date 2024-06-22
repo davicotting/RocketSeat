@@ -7,9 +7,13 @@
 
     const notesController = new NotesController();
 
-    notesRoutes.post('/:user_id', notesController.create);
-    notesRoutes.get('/:id', notesController.show);
-    notesRoutes.delete('/:id', notesController.delete);
+    const ensureAuthenticated = require("../middlewares/ensureAuthenticated");
+
+    notesRoutes.use(ensureAuthenticated);
+
+    notesRoutes.post('/', notesController.create);
+    notesRoutes.get('/', notesController.show);
+    notesRoutes.delete('/', notesController.delete);
     notesRoutes.get('/', notesController.index);
 
 

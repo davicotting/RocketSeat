@@ -1,6 +1,6 @@
     
     const AppError = require("../utils/AppError");
-    const { hash, compare }  = require("bcryptjs");
+    const { hash, compare } = require("bcryptjs");
     const databaseConnection = require("../database/sqlite");
 
 
@@ -34,11 +34,12 @@
             // parametros
 
             const { name, email, new_password, old_password } = request.body;
-            const { id } = request.params;
+
+            const user_id = request.user.id;
 
             const database = await databaseConnection();
 
-            const user = await database.get(`SELECT * FROM users WHERE id = (?)`, [id]);
+            const user = await database.get(`SELECT * FROM users WHERE id = (?)`, [user_id]);
            
             
             if(!user){
@@ -47,7 +48,7 @@
 
             const checkIfEmailExists = await database.get(`SELECT * FROM users WHERE email = (?)`, [email]);
 
-            if(checkIfEmailExists && checkIfEmailExists.id !== id){
+            if(checkIfEmailExists && checkIfEmailExists.id !== user_id){
                 throw new AppError(`O email ja esta em uso.`, 402);
             }
             
@@ -76,9 +77,9 @@
                 password = ?,
                 updated_at = DATETIME('now')
                 WHERE id = ?
-                `, [user.name, user.email, user.password, id]);
+                `, [user.name, user.email, user.password, user_id]);
 
-                return response.status(201).json();
+                return response.status(201).json("Os dados do usuário foi atualizado com sucesso!");
 
             }
 
