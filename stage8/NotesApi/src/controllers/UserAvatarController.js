@@ -1,32 +1,30 @@
-    const AppError = require("../utils/AppError");
     const knex = require("../database/knex");
+    const AppError = require("../utils/AppError");
     const DiskStorage = require("../providers/diskStorage");
-
-    // concertar o bug da pasta tmp nao estar deletando os arquivos temporarios ao passar pra uploads.
-    
     class UserAvatarController{
         async update(request, response){
-            const AvatarFilename = request.file.filename;
             const user_id = request.user.id;
-            const diskStorage = new DiskStorage();
+            const avatarFileName = request.file.filename;
 
-            const user = await knex("users").where({id: user_id}).first();
+            const user = knex("users").where({is: user_id}).first();
 
             if(!user){
-                throw new AppError(`Ixi deu ruim! Token inválido e/ou expirado.`, 401);
+                throw new AppError("Ixi deu ruim! somente usuarios autenticados podem auterar suas proprias fotos de usuario!", 401);
             }
+
+            const diskStorage = new DiskStorage();
 
             if(user.avatar){
-                await diskStorage.delete(user.avatar);
+                await diskStorage.deleteFile(user.avatar);
             }
 
-           const filename = await diskStorage.save(AvatarFilename);
+            const fileName = await diskStorage.saveFile(avatarFileName);
 
-           user.avatar = filename;
+            user.avatar = fileName;
 
-           await knex("users").update(user).where({id: user_id});
+            await knex("users").update({ avatar: fileName }).where({ id: user_id });
 
-           return response.json(`Avatar atualizado com sucesso!\nInformacoes do usuario:\n${user}`, 201);
+            return response.json({user}); 
 
 
         }

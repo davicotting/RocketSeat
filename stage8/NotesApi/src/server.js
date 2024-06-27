@@ -11,9 +11,18 @@
 
     const server = express();
 
+    const cors = require("cors");
+
     const PORT = 4545;
 
+    server.use(cors());
+
     server.use(express.json());
+
+    const updateConfigs = require("./configs/update.js");
+
+    server.use("/files", express.static(updateConfigs.UPLOADS_FOLDER));
+    
 
     server.use(routes);
 

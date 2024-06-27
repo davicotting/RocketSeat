@@ -11,17 +11,16 @@
 
     const multer = require("multer");
 
-    const uploadConfigs = require("../configs/upload");
+    const updateConfigs = require("../configs/update");
 
-    const upload = multer(uploadConfigs.MULTER);
+    const upload = multer(updateConfigs.MULTER);
 
     const UserAvatarController = require("../controllers/UserAvatarController");
 
-    const userAvatarController = new UserAvatarController();
+    const userAvatarController = new UserAvatarController(); 
     
     userRoutes.post("/", userControllers.create);
     userRoutes.put("/", ensureAuthenticated, userControllers.update);
-    userRoutes.patch("/avatar", ensureAuthenticated, upload.single("avatar"), userAvatarController.update);
-
+    userRoutes.patch("/avatar", ensureAuthenticated, upload.single("avatar"), userAvatarController.update); 
 
     module.exports = userRoutes;
