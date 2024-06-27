@@ -1,4 +1,4 @@
-    import React from 'react';
+
     import { Link } from'react-router-dom';
     import { Container, Brand, Menu, Search, Content, NewNote} from './styles';
     import { Header } from '../../components/header';

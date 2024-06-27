@@ -1,4 +1,4 @@
-    import React from 'react';
+
     import { Link } from 'react-router-dom';
     import { Container, Form, Background} from './styles';
     import { Input } from '../../components/Input';

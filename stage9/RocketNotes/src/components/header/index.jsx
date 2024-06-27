@@ -1,5 +1,5 @@
 
-    import {Container, User, UserText, Profile} from './styles';
+    import { Container, User, UserText, Profile } from './styles';
     import { IoMdPower } from "react-icons/io";
 
     export function Header(){

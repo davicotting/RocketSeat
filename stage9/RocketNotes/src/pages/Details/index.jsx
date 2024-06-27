@@ -1,4 +1,4 @@
-    import React from 'react';
+
     import { Container, Links, Content } from './styles';
     import { Header } from '../../components/header';
     import { Section } from '../../components/section';
