@@ -6,7 +6,17 @@
 
     import { IoIosMail, IoIosLock} from "react-icons/io";
 
+    import { useContext } from 'react';
+    import { myContext } from '../../myContext';
+
     export function SignIn(){
+
+        const data = useContext(myContext);
+
+        function showData(){
+            console.log(data);
+        }
+
         return(
             <Container>
                 <Form>
@@ -18,7 +28,7 @@
                    icon={IoIosMail} placeholder={"E-mail"} type="E-mail"/>
                    <Input icon={IoIosLock} placeholder={"Senha"} type="password"/>
 
-                   <Button title={"Entrar"}/>
+                   <Button title={"Entrar"} onClick={showData}/>
 
                     <Link to={'/register'}>
                     Criar conta
